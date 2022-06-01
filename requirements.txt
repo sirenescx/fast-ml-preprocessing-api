@@ -1,0 +1,6 @@
+grpcio-tools~=1.44
+scikit-learn~=1.0.2
+word2number~=1.1
+category_encoders~=2.4.0
+numpy~=1.22.3
+pandas~=1.4.2

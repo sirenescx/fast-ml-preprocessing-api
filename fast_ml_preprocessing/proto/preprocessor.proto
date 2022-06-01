@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package fast_ml_preprocessor;
+
+option csharp_namespace = "Fast.ML.Preprocessor.Grpc";
+option go_package = "fastmlpreprocessorspb";
+option java_multiple_files = true;
+option java_outer_classname = "FastMLPreprocessorProto";
+option java_package = "com.fastmlpreprocessor";
+
+service PreprocessingService {
+    rpc PreprocessDataset (PreprocessingRequest) returns (PreprocessingResponse);
+}
+
+message PreprocessingRequest {
+    string filename = 1;
+    string separator = 2;
+    string target = 3;
+    int32 index = 4;
+    string problem_type = 5;
+    string mode = 6;
+}
+
+message PreprocessingResponse {
+    string message = 1;
+}
